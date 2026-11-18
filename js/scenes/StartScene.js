@@ -18,8 +18,16 @@ class StartScene extends Phaser.Scene {
       fontSize: '16px'
     }).setOrigin(0.5);
 
+    this.add.text(width / 2, height * 0.52, `현재 병력 ${STAGE_DATA.startTroops}명`, {
+      color: '#ffe066',
+      fontSize: '22px',
+      fontStyle: 'bold'
+    }).setOrigin(0.5);
+
     this.add.rectangle(width / 2, height * 0.68, 180, 58, 0x4f8e3b, 1)
-      .setStrokeStyle(3, 0xa9d18e);
+      .setStrokeStyle(3, 0xa9d18e)
+      .setInteractive({ useHandCursor: true })
+      .on('pointerdown', () => this.scene.start('GameScene'));
     this.add.text(width / 2, height * 0.68, '시작', {
       color: '#ffffff',
       fontSize: '24px',

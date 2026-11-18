@@ -4,7 +4,7 @@ const gameConfig = {
   width: 360,
   height: 640,
   backgroundColor: '#25334b',
-  scene: [StartScene],
+  scene: [StartScene, GameScene, ResultScene],
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
