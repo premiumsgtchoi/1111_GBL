@@ -11,4 +11,4 @@ const gameConfig = {
   }
 };
 
-new Phaser.Game(gameConfig);
+window.startGateRunner = () => new Phaser.Game(gameConfig);
